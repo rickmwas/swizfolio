@@ -706,3 +706,20 @@ textarea.form-control {
         padding: 0.7rem 1.5rem;
     }
 }
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.progress-bar {
+  margin-top: 10px;
+  height: 6px;
+  width: 0%;
+  background: #00c896;
+  animation: loadBar 3s linear forwards;
+  border-radius: 5px;
+}
+
+@keyframes loadBar {
+  to { width: 100%; }
+}
