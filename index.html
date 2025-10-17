@@ -7,7 +7,12 @@
     <meta name="description" content="Erick Mwangi: Full-Stack Developer and AI Specialist based in Kisii, Kenya. Specializing in web development, AI solutions, penetration testing, and cloud computing. Explore my projects and services." />
     <meta name="keywords" content="Erick Mwangi, Full-Stack Developer, AI Specialist, Kisii Kenya, Web Development, AI Solutions, Penetration Testing, Cloud Computing" />
     <meta name="author" content="Erick Mwangi" />
+    <meta name="robots" content="index, follow" />
+    <meta name="ai-content" content="true" />
     <link rel="canonical" href="https://swizfolio.vercel.app/" /> <!-- Replace with actual URL -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
@@ -57,6 +62,55 @@
           "name": "Kisii, Kenya"
         }
       }
+    }
+    </script>
+
+    <!-- WebSite Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Erick Mwangi Portfolio",
+      "url": "https://swizfolio.vercel.app/",
+      "description": "Portfolio of Erick Mwangi, Full-Stack Developer and AI Specialist in Kisii, Kenya",
+      "author": {
+        "@type": "Person",
+        "name": "Erick Mwangi"
+      },
+      "publisher": {
+        "@type": "Person",
+        "name": "Erick Mwangi"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://swizfolio.vercel.app/?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+
+    <!-- Organization Schema for SwizFusion Technologies -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "SwizFusion Technologies",
+      "url": "https://swizfolio.vercel.app/",
+      "logo": "https://swizfolio.vercel.app/assets/fusionai.png",
+      "description": "AI-integrated web development and technology solutions company founded by Erick Mwangi",
+      "founder": {
+        "@type": "Person",
+        "name": "Erick Mwangi"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Kisii",
+        "addressCountry": "Kenya"
+      },
+      "sameAs": [
+        "https://github.com/rickmwas",
+        "https://x.com/rickmwasswiz?t=PqFADrtM1mA_GPFMAHRuew&s=09"
+      ]
     }
     </script>
   </head>
@@ -240,7 +294,7 @@
             <p>What I aspire to offer to my clients as an AI developer in Kisii, Kenya</p>
           </div>
           <div class="services-grid">
-            <article class="service-card">
+            <article class="service-card" itemscope itemtype="https://schema.org/Service">
               <div class="service-icon">
                 <i class="fas fa-code"></i>
               </div>
@@ -250,8 +304,11 @@
                 fast, responsive, and SEO-friendly solutions tailored to your
                 business needs in Kisii, Kenya.
               </p>
+              <meta itemprop="name" content="Web Development Services" />
+              <meta itemprop="description" content="Custom website development with modern technologies for businesses in Kisii, Kenya" />
+              <meta itemprop="provider" content="Erick Mwangi" />
             </article>
-            <article class="service-card">
+            <article class="service-card" itemscope itemtype="https://schema.org/Service">
               <div class="service-icon">
                 <i class="fas fa-robot"></i>
               </div>
@@ -261,8 +318,11 @@
                 processes, analyze data, and provide intelligent insights for your
                 business as an AI developer in Kisii, Kenya.
               </p>
+              <meta itemprop="name" content="AI Solutions" />
+              <meta itemprop="description" content="AI and machine learning implementation for business automation in Kisii, Kenya" />
+              <meta itemprop="provider" content="Erick Mwangi" />
             </article>
-            <article class="service-card">
+            <article class="service-card" itemscope itemtype="https://schema.org/Service">
               <div class="service-icon">
                 <i class="fas fa-mobile-alt"></i>
               </div>
@@ -271,8 +331,11 @@
                 Cross-platform mobile application development with React Native or
                 Flutter to reach your customers on all devices in Kisii, Kenya.
               </p>
+              <meta itemprop="name" content="Mobile App Development" />
+              <meta itemprop="description" content="Cross-platform mobile application development for businesses in Kisii, Kenya" />
+              <meta itemprop="provider" content="Erick Mwangi" />
             </article>
-            <article class="service-card">
+            <article class="service-card" itemscope itemtype="https://schema.org/Service">
               <div class="service-icon">
                 <i class="fas fa-database"></i>
               </div>
@@ -281,8 +344,11 @@
                 Efficient database architecture and optimization for performance,
                 scalability, and security of your applications.
               </p>
+              <meta itemprop="name" content="Database Design" />
+              <meta itemprop="description" content="Efficient database architecture and optimization services" />
+              <meta itemprop="provider" content="Erick Mwangi" />
             </article>
-            <article class="service-card">
+            <article class="service-card" itemscope itemtype="https://schema.org/Service">
               <div class="service-icon">
                 <i class="fas fa-skull-crossbones"></i>
               </div>
@@ -292,8 +358,11 @@
                 defenses, ensuring systems remain resilient against potential
                 threats in Kisii, Kenya.
               </p>
+              <meta itemprop="name" content="Penetration Testing" />
+              <meta itemprop="description" content="Cybersecurity penetration testing services in Kisii, Kenya" />
+              <meta itemprop="provider" content="Erick Mwangi" />
             </article>
-            <article class="service-card">
+            <article class="service-card" itemscope itemtype="https://schema.org/Service">
               <div class="service-icon">
                 <i class="fas fa-cloud"></i>
               </div>
@@ -302,6 +371,9 @@
                 Cloud infrastructure setup, migration, and management on AWS,
                 Azure, or Google Cloud for scalable and reliable applications in Kisii, Kenya.
               </p>
+              <meta itemprop="name" content="Cloud Solutions" />
+              <meta itemprop="description" content="Cloud infrastructure setup and management on AWS, Azure, Google Cloud" />
+              <meta itemprop="provider" content="Erick Mwangi" />
             </article>
           </div>
         </div>
@@ -315,7 +387,7 @@
             <p>Some of my recent work as an AI developer in Kisii, Kenya</p>
           </div>
           <div class="projects-grid">
-            <article class="project-card featured">
+            <article class="project-card featured" itemscope itemtype="https://schema.org/CreativeWork">
               <div class="project-img">
                 <img src="assets/fusionai.png" alt="SwizFusion AI Platform project by Erick Mwangi, AI developer in Kisii, Kenya" loading="lazy" />
                 <div class="featured-badge">Featured</div>
@@ -337,8 +409,12 @@
                   <a href="#" class="btn" aria-label="View SwizFusion code">Code</a>
                 </div>
               </div>
+              <meta itemprop="name" content="SwizFusion AI Platform" />
+              <meta itemprop="description" content="Advanced AI platform integrating multiple ML models for predictive analytics" />
+              <meta itemprop="author" content="Erick Mwangi" />
+              <meta itemprop="keywords" content="AI, ML, React, Python, Cloud" />
             </article>
-            <article class="project-card">
+            <article class="project-card" itemscope itemtype="https://schema.org/CreativeWork">
               <div class="project-img">
                 <img src="https://via.placeholder.com/600x400" alt="E-Commerce Platform project by Erick Mwangi, AI developer in Kisii, Kenya" loading="lazy" />
               </div>
@@ -358,8 +434,12 @@
                   <a href="#" class="btn" aria-label="View E-Commerce Platform code">Code</a>
                 </div>
               </div>
+              <meta itemprop="name" content="E-Commerce Platform" />
+              <meta itemprop="description" content="Full-featured e-commerce platform with payment integration and admin dashboard" />
+              <meta itemprop="author" content="Erick Mwangi" />
+              <meta itemprop="keywords" content="React, Node.js, MongoDB, E-commerce" />
             </article>
-            <article class="project-card">
+            <article class="project-card" itemscope itemtype="https://schema.org/CreativeWork">
               <div class="project-img">
                 <img src="assets/fusionai.png" alt="Fusion Bot AI chatbot project by Erick Mwangi, AI developer in Kisii, Kenya" loading="lazy" />
               </div>
@@ -379,8 +459,12 @@
                   <a href="#" class="btn" aria-label="View Fusion Bot code">Code</a>
                 </div>
               </div>
+              <meta itemprop="name" content="AI-Powered Chatbot: Fusion Bot" />
+              <meta itemprop="description" content="Intelligent chatbot with natural language processing capabilities" />
+              <meta itemprop="author" content="Erick Mwangi" />
+              <meta itemprop="keywords" content="Python, NLP, TensorFlow, Chatbot" />
             </article>
-            <article class="project-card">
+            <article class="project-card" itemscope itemtype="https://schema.org/CreativeWork">
               <div class="project-img">
                 <img src="https://via.placeholder.com/600x400" alt="Health Monitoring App project by Erick Mwangi, AI developer in Kisii, Kenya" loading="lazy" />
               </div>
@@ -400,6 +484,10 @@
                   <a href="#" class="btn" aria-label="View Health Monitoring App code">Code</a>
                 </div>
               </div>
+              <meta itemprop="name" content="Health Monitoring App" />
+              <meta itemprop="description" content="Mobile application for health metrics tracking and personalized recommendations" />
+              <meta itemprop="author" content="Erick Mwangi" />
+              <meta itemprop="keywords" content="Flutter, Firebase, IoT, Health" />
             </article>
           </div>
         </div>
@@ -519,7 +607,7 @@
     </main>
 
     <!-- Trusted By Section -->
-    <section id="trusted-by" class="trusted-by section" aria-labelledby="trusted-heading">
+    <aside id="trusted-by" class="trusted-by section" aria-labelledby="trusted-heading">
       <div class="container">
         <div class="section-title">
           <h2 id="trusted-heading">Trusted By</h2>
@@ -527,20 +615,20 @@
         </div>
         <div class="logos-carousel">
           <div class="logos-wrapper">
-            <img src="https://via.placeholder.com/120x60/4285F4/FFFFFF?text=Google" alt="Google" class="logo-item">
-            <img src="https://via.placeholder.com/120x60/1F70C1/FFFFFF?text=IBM" alt="IBM" class="logo-item">
-            <img src="https://via.placeholder.com/120x60/FF9900/FFFFFF?text=Amazon" alt="Amazon" class="logo-item">
-            <img src="https://via.placeholder.com/120x60/2496ED/FFFFFF?text=Docker" alt="Docker" class="logo-item">
-            <img src="https://via.placeholder.com/120x60/00BCF2/FFFFFF?text=Microsoft" alt="Microsoft" class="logo-item">
-            <img src="logos/git.svg" alt="Git" class="logo-item">
-            <img src="logos/node.png" alt="Node.js" class="logo-item">
-            <img src="logos/python.svg" alt="Python" class="logo-item">
-            <img src="logos/react.png" alt="React" class="logo-item">
-            <img src="logos/three.png" alt="Three.js" class="logo-item">
+            <img src="https://via.placeholder.com/120x60/4285F4/FFFFFF?text=Google" alt="Google - Technology partner" class="logo-item" loading="lazy">
+            <img src="https://via.placeholder.com/120x60/1F70C1/FFFFFF?text=IBM" alt="IBM - Enterprise solutions" class="logo-item" loading="lazy">
+            <img src="https://via.placeholder.com/120x60/FF9900/FFFFFF?text=Amazon" alt="Amazon - Cloud services" class="logo-item" loading="lazy">
+            <img src="https://via.placeholder.com/120x60/2496ED/FFFFFF?text=Docker" alt="Docker - Containerization" class="logo-item" loading="lazy">
+            <img src="https://via.placeholder.com/120x60/00BCF2/FFFFFF?text=Microsoft" alt="Microsoft - Development tools" class="logo-item" loading="lazy">
+            <img src="logos/git.svg" alt="Git - Version control" class="logo-item" loading="lazy">
+            <img src="logos/node.png" alt="Node.js - JavaScript runtime" class="logo-item" loading="lazy">
+            <img src="logos/python.svg" alt="Python - AI and backend development" class="logo-item" loading="lazy">
+            <img src="logos/react.png" alt="React - Frontend framework" class="logo-item" loading="lazy">
+            <img src="logos/three.png" alt="Three.js - 3D graphics" class="logo-item" loading="lazy">
           </div>
         </div>
       </div>
-    </section>
+    </aside>
 
     <!-- Floating Chat Bot -->
     <div id="swizbot" class="swizbot">
@@ -615,6 +703,16 @@
 
     <!-- Section Transition Overlay -->
     <div id="section-transition" class="section-transition"></div>
+
+    <!-- AI Readability Block (Hidden but AI-readable) -->
+    <div class="ai-readability-block" style="position: absolute; left: -9999px; top: -9999px; visibility: hidden;">
+      <h1>Erick Mwangi - Full-Stack Developer & AI Specialist Portfolio</h1>
+      <p>Erick Mwangi is a skilled Full-Stack Developer and AI Specialist based in Kisii, Kenya. He specializes in web development, AI solutions, penetration testing, and cloud computing. His expertise includes Python, JavaScript, React, Node.js, and various AI technologies.</p>
+      <p>Key services offered: Web Development, AI Solutions, Mobile Apps, Database Design, Penetration Testing, Cloud Solutions.</p>
+      <p>Featured projects: SwizFusion AI Platform, E-Commerce Platform, AI-Powered Chatbot (Fusion Bot), Health Monitoring App.</p>
+      <p>Contact: rickmwasswiz@gmail.com | Kisii, Kenya | Available for freelance work on Upwork.</p>
+      <p>Technologies: Python, JavaScript, React, Node.js, AI/ML, Cloud Computing, Cybersecurity.</p>
+    </div>
 
     <!-- Footer -->
     <footer class="footer" role="contentinfo">
@@ -748,6 +846,12 @@
       ]
     }
     </script>
+
+    <!-- Lenis.js for smooth scrolling -->
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+
+    <!-- VanillaTilt.js for 3D tilt effects -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
 
     <!-- GSAP CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>

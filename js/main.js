@@ -4,6 +4,26 @@
 // Register GSAP plugins
 gsap.registerPlugin(ScrollTrigger);
 
+// Initialize Lenis for smooth scrolling
+const lenis = new Lenis({
+    duration: 1.2,
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    direction: 'vertical',
+    gestureDirection: 'vertical',
+    smooth: true,
+    mouseMultiplier: 1,
+    smoothTouch: false,
+    touchMultiplier: 2,
+    infinite: false,
+});
+
+// Lenis RAF loop
+function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+}
+requestAnimationFrame(raf);
+
 // DOM Content Loaded
 document.addEventListener('DOMContentLoaded', function() {
     // Preloader
@@ -498,7 +518,27 @@ document.addEventListener('DOMContentLoaded', function() {
         rotationY: 0,
         duration: 1,
         ease: "power3.out",
-        stagger: 0.3
+        stagger: 0.3,
+        onComplete: () => {
+            // Initialize VanillaTilt after animation completes
+            projectCardsAnim.forEach(card => {
+                VanillaTilt.init(card, {
+                    max: 25,
+                    speed: 400,
+                    glare: true,
+                    "max-glare": 0.5,
+                    scale: 1.05,
+                    perspective: 1000,
+                    transition: true,
+                    reset: true,
+                    gyroscope: true,
+                    gyroscopeMinAngleX: -45,
+                    gyroscopeMaxAngleX: 45,
+                    gyroscopeMinAngleY: -45,
+                    gyroscopeMaxAngleY: 45
+                });
+            });
+        }
     });
 
     // FAQ items animation
@@ -527,6 +567,70 @@ document.addEventListener('DOMContentLoaded', function() {
                 scrub: 1
             },
             y: -50,
+            ease: "none"
+        });
+    });
+
+    // Hero Parallax Effects
+    const heroSection = document.getElementById('home');
+    const parallaxLayers = document.querySelectorAll('.parallax-layer');
+    const profilePic = document.querySelector('.profile-pic');
+
+    // Parallax for hero background layers
+    parallaxLayers.forEach(layer => {
+        const depth = parseFloat(layer.dataset.depth) || 0.1;
+        gsap.to(layer, {
+            scrollTrigger: {
+                trigger: heroSection,
+                start: "top bottom",
+                end: "bottom top",
+                scrub: 1
+            },
+            y: -100 * depth,
+            ease: "none"
+        });
+    });
+
+    // Parallax for profile picture
+    if (profilePic) {
+        gsap.to(profilePic, {
+            scrollTrigger: {
+                trigger: heroSection,
+                start: "top bottom",
+                end: "bottom top",
+                scrub: 1
+            },
+            y: -80,
+            ease: "none"
+        });
+    }
+
+    // About section image parallax
+    const aboutImg = document.querySelector('.about-img img');
+    if (aboutImg) {
+        gsap.to(aboutImg, {
+            scrollTrigger: {
+                trigger: '.about',
+                start: "top bottom",
+                end: "bottom top",
+                scrub: 1
+            },
+            y: -60,
+            ease: "none"
+        });
+    }
+
+    // Project images parallax
+    const projectImages = document.querySelectorAll('.project-img img');
+    projectImages.forEach((img, index) => {
+        gsap.to(img, {
+            scrollTrigger: {
+                trigger: img.closest('.project-card'),
+                start: "top bottom",
+                end: "bottom top",
+                scrub: 1
+            },
+            y: -40 - (index * 10),
             ease: "none"
         });
     });

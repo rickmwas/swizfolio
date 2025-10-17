@@ -1,70 +1,57 @@
-# Portfolio Upgrades TODO List
+# Portfolio Upgrade TODO List
 
-## Completed
-- [x] Analyze existing portfolio structure and features
-- [x] Create comprehensive plan for 10 new upgrades
-- [x] Get user approval for plan
+## 1. Semantic Structure + Microdata
+- [ ] Add <article> tags for project cards in index.html
+- [ ] Add <article> tags for service cards in index.html
+- [ ] Add <aside> for Trusted By section in index.html
+- [ ] Add WebSite schema.org JSON-LD in index.html
+- [ ] Add Organization schema for SwizFusion Technologies in index.html
+- [ ] Add meta name="robots" content="index, follow"
+- [ ] Add meta name="ai-content" content="true"
 
-## In Progress
-- [ ] 2. Voice Interaction Mode
-  - [ ] Add microphone icon toggle near SwizBot in HTML
-  - [ ] Integrate Web Speech API for recognition
-  - [ ] Implement commands: "show projects", "toggle dark mode", "open contact form"
-  - [ ] Add GSAP animations (mic pulsing, wave while listening)
-  - [ ] Style toggle button
+## 2. AI Readability Enhancements
+- [ ] Add hidden SEO text block for AI discoverability
+- [ ] Review and enhance alt text for all images with portfolio keywords
+- [ ] Ensure descriptive alt text for project images
 
-## Pending Tasks
-- [x] 1. Ambient Light Glow System
-  - [x] Add cursor glow div in HTML
-  - [x] Implement hue changes based on section themes
-  - [x] Add reactivity to nearby text/clickable elements
-  - [x] Style in CSS
+## 3. Visual Improvements (No Performance Lag)
+- [ ] Integrate Lenis.js for smooth scroll in js/main.js
+- [x] Add VanillaTilt.js for 3D tilt effects on project cards
+- [x] Implement GSAP ScrollTrigger parallax on hero images and section backgrounds
+- [ ] Add subtle neon glow effects on titles using CSS variables in css/style.css
 
-- [ ] 3. 3D Parallax Depth Layering
-  - [ ] Add multiple background/foreground layers in hero section HTML
-  - [ ] Implement cursor-based movement for 3D illusion
-  - [ ] Ensure performance with GSAP
+## 4. Dynamic Backgrounds + Lighting
+- [ ] Add soft gradient motion background for About section
+- [ ] Add soft gradient motion background for Projects section
+- [ ] Implement cursor trail effect that changes with dark/light mode in js/main.js
 
-- [ ] 4. Dynamic Section Transitions
-  - [ ] Implement GSAP timelines for section transitions
-  - [ ] Add slide-in overlays, diagonal wipes, liquid reveals
-  - [ ] Make each transition unique but consistent
+## 5. Performance Optimization
+- [ ] Add lazy loading to all images (verify current state)
+- [ ] Add link rel="preconnect" for Google Fonts and APIs in index.html
+- [ ] Use clamp() for responsive typography in css/style.css
 
-- [ ] 5. Easter Egg Animation
-  - [ ] Add hidden "SwizFusion" logo in HTML
-  - [ ] Implement 5-second hover detection on name/footer
-  - [ ] Add click animation and reveal message
-  - [ ] Style and position appropriately
+## 6. AI Discoverability
+- [ ] Add structured text block for AI crawlers (hidden but readable)
+- [ ] Optimize FAQ schema for better AI understanding
 
-- [ ] 6. Ambient Sound FX
-  - [ ] Create audio files (synth loop, click sounds)
-  - [ ] Add sound toggle button in navbar
-  - [ ] Implement background loops and interaction sounds
-  - [ ] Ensure toggleable and subtle
+## 7. Blog Page Optimization
+- [ ] Add individual article schemas with author, date, keywords in blog.html
+- [ ] Implement reading progress bar for blog posts
+- [ ] Add related post recommendations section
 
-- [ ] 7. AI Glow Trail
-  - [ ] Create canvas or GSAP-based trail system
-  - [ ] Implement fading trail on fast mouse movements
-  - [ ] Optimize for performance
+## 8. Accessibility & Responsiveness
+- [ ] Add ARIA labels where needed
+- [ ] Test and improve color contrast ratios
+- [ ] Ensure animations degrade gracefully on mobile
+- [ ] Test layout on mobile and 4K displays
 
-- [ ] 8. Dynamic Hero Text Gradient
-  - [ ] Add gradient animation to "Erick Mwangi" text
-  - [ ] Animate angles and colors for holographic effect
-  - [ ] Use GSAP for smooth transitions
+## 9. Optional Extras
+- [ ] Add AI Voice Intro option on hero section
+- [ ] Implement theme auto-switch based on time of day
+- [ ] Add interactive AI tagline generator with typing effect
 
-- [ ] 9. Scroll-Linked Background Reactions
-  - [ ] Implement background color changes per section
-  - [ ] Add glow intensity and particle density variations
-  - [ ] Smooth transitions on scroll
-
-- [ ] 10. Mini Achievement Pop-ups
-  - [ ] Create pop-up system for interactions
-  - [ ] Implement achievements: view project, toggle dark mode, chat with SwizBot
-  - [ ] Add fade-out animations after 2-3 seconds
-
-## Followup Steps
-- [ ] Test all features across browsers and devices
-- [ ] Optimize performance (requestAnimationFrame, etc.)
-- [ ] Ensure mobile-friendly (disable voice/sound on mobile)
-- [ ] Document code with comments
-- [ ] Final review and cleanup
+## Testing & Verification
+- [ ] Test SEO improvements with Google Rich Results Test
+- [ ] Ensure no performance lag from new features
+- [ ] Verify cross-browser compatibility
+- [ ] Check accessibility with screen readers

@@ -22,6 +22,10 @@
     --accent: #ff4c4c;
     --glass-bg: rgba(255, 255, 255, 0.1);
     --glass-border: rgba(255, 255, 255, 0.2);
+    /* Neon glow variables */
+    --neon-primary: rgba(255, 76, 76, 0.8);
+    --neon-secondary: rgba(0, 212, 255, 0.6);
+    --neon-glow-intensity: 0.3;
 }
 
 * {
@@ -48,17 +52,20 @@ body {
 h1, h2, h3, h4 {
     line-height: 1.2;
     margin-bottom: 1rem;
+    text-shadow: 0 0 10px var(--neon-primary), 0 0 20px var(--neon-primary), 0 0 30px var(--neon-primary);
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: clamp(2rem, 5vw, 2.5rem);
+    text-shadow: 0 0 15px var(--neon-primary), 0 0 30px var(--neon-primary), 0 0 45px var(--neon-primary);
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 4vw, 2rem);
     position: relative;
     display: inline-block;
     margin-bottom: 2.5rem;
+    text-shadow: 0 0 12px var(--neon-primary), 0 0 24px var(--neon-primary), 0 0 36px var(--neon-primary);
 }
 
 h2::after {
@@ -71,6 +78,7 @@ h2::after {
     height: 4px;
     background: var(--primary);
     border-radius: 2px;
+    box-shadow: 0 0 10px var(--neon-primary), 0 0 20px var(--neon-primary);
 }
 
 p {
@@ -370,6 +378,27 @@ p {
     height: 100%;
     background: var(--primary);
     border-radius: 4px;
+}
+
+/* ===================== */
+/* DYNAMIC BACKGROUNDS */
+/* ===================== */
+.about {
+    background: linear-gradient(135deg, var(--dark-light) 0%, rgba(255, 76, 76, 0.05) 50%, var(--dark-light) 100%);
+    background-size: 400% 400%;
+    animation: gradientShift 8s ease infinite;
+}
+
+.projects {
+    background: linear-gradient(45deg, var(--dark-light) 0%, rgba(44, 62, 80, 0.1) 50%, var(--dark-light) 100%);
+    background-size: 400% 400%;
+    animation: gradientShift 10s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 /* ===================== */
